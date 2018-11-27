@@ -7,20 +7,38 @@
       body {
 
       }
+      .subtitle {
+        display: flex;
+        align-items: center;
+      }
       .requestForm {
         text-align: center;
+      }
+      .subtitle:after {
+      	content: "";
+      	flex-grow: 1;
+      	height: 1px;
+      	background: #444;
+      	display: block;
+      }
+      .subtitle:after {
+      	margin-left: .4em;
       }
     </style>
   </head>
 
   <body>
     <div class="body">
-      <a href="#" onclick="window.close()"><img src="logo.jpg" width="125" height="70"></a>
+      <a href="top.html" onclick="window.close()"><img src="logo.jpg" width="125" height="70"></a>
       <hr>
       <div class="requestForm">
         <form action="#" method="post">
+          <p class="subtitle">　　Request</p>
           <p>ここでは、商品のリクエストやミヤノクチテラスへの要望が投稿できます。<br>
           <textarea name="request" cols="50" rows="20"></textarea></p>
+          <form action="#" onclick="window.close()" method="post">
+            <input type="submit" value="投稿">
+          </form>
         </form>
       </div>
     </div>
